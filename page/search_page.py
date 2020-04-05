@@ -4,19 +4,18 @@ sys.path.append(os.getcwd())
 
 from selenium.webdriver.common.by import By
 
-sys.path.append(os.getcwd())
-
 from base.base_action import BaseAction
 
 
 class SearchPage(BaseAction):
 
 
-    search_botton = (By.XPATH, "//*[contains(@content-desc,'搜索')]")
-    # search_botton = By.XPATH, "content-desc,搜索"
-    input_botton = (By.XPATH, "//*[contains(@text,'搜索')]")
-    back_botton = (By.XPATH, "//*[contains(@content-desc,'收起')]")
-
+    # search_botton = (By.XPATH, "//*[contains(@content-desc,'搜索')]")
+    search_botton = (By.XPATH, "content-desc,搜索")
+    # input_botton = (By.XPATH, "//*[contains(@text,'搜索')]")
+    input_botton = (By.XPATH, "text,搜索")
+    # back_botton = (By.XPATH, "//*[contains(@content-desc,'收起')]")
+    back_botton = (By.XPATH, "content-desc,收起")
 
 
     def click_search(self):

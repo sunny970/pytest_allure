@@ -1,10 +1,7 @@
 
 import os , sys
-
-import allure
-
 sys.path.append(os.getcwd())
-
+import allure
 from time import sleep
 import pytest
 
@@ -32,7 +29,6 @@ class Test_Display:
         # self.driver.find_element_by_xpath("//*[contains(@text,'搜索')]").send_keys("hello")
         # self.driver.back()
         print("返回...")
-      
 
 
     def teardown(self):

@@ -13,7 +13,6 @@ def init_driver():
     a['appActivity'] = '.Settings'
 
     driver = webdriver.Remote('http://localhost:4723/wd/hub', a)
-    driver.implicitly_wait(10)
     return driver
 if __name__ == '__main__':
     init_driver()

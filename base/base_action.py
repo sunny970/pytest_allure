@@ -28,12 +28,12 @@ class BaseAction:
         args = loc.split(',')
         feature = ""
         if len(args) == 2:
-            feature = "contains@" + args[key_index] + ",'" + args[value_index] + "')" + "and"
+            feature = "contains(@" + args[key_index] + ",'" + args[value_index] + "')" + "and "
         elif len(args) == 3:
             if args[option_index] == "1":
-                feature = "@" + args[key_index] + "='" + args[value_index] + "'" + "and"
+                feature = "@" + args[key_index] + "='" + args[value_index] + "'" + "and "
             elif args[option_index] == "0":
-                feature = "contains@" + args[key_index] + ",'" + args[value_index] + "')" + "and"
+                feature = "contains(@" + args[key_index] + ",'" + args[value_index] + "')" + "and "
         return feature
 
     def make_xpath_with_feature(self,loc):
@@ -47,7 +47,7 @@ class BaseAction:
         else:
             for i in loc:
                 feature += self.make_xpath_with_unit_feature(i)
-        feature = feature.rstrip("and")
+        feature = feature.rstrip("and ")
         loc = feature_start + feature + feature_end
         return loc
 
