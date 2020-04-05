@@ -32,7 +32,7 @@ class Test_Display:
         # self.driver.find_element_by_xpath("//*[contains(@text,'搜索')]").send_keys("hello")
         # self.driver.back()
         print("返回...")
-        assert 0
+      
 
 
     def teardown(self):
