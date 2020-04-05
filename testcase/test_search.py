@@ -21,4 +21,3 @@ class TestSearch:
         self.search_page.input_content(text)
         self.search_page.click_back_s()
         self.driver.keyevent(4)
-        assert 0
